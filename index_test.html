@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>测试应用</title>
+    <script src="https://cdn.jsdelivr.net/npm/@stlite/mountable@0.50.0/build/stlite.min.js"></script>
+    <style>body { margin: 0; padding: 20px; }</style>
+</head>
+<body>
+    <div id="app"></div>
+    <script>
+        var appCode = atob("CmltcG9ydCBzdHJlYW1saXQgYXMgc3QKc3QudGl0bGUoIua1i+ivleW6lOeUqCIpCnN0LndyaXRlKCLmiJDlip/vvIFzdGxpdGXmraPluLjlt6XkvZzvvIEiKQo=");
+        stlite.mount(
+            {
+                entrypoint: "app.py",
+                files: {"app.py": appCode},
+                requirements: ["streamlit>=1.28.0"]
+            },
+            document.getElementById("app")
+        );
+    </script>
+</body>
+</html>
